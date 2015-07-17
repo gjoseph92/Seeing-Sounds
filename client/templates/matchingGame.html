@@ -1,0 +1,35 @@
+<template name="matchingGame">
+  <div id="board" class="row">
+     <div id="sounds" class="col-xs-6">
+      {{#each randomSounds}}
+        {{> soundCard}}
+      {{/each}}
+    </div>
+
+    <div id="spectrograms" class="col-xs-6">
+      <div id="scrubber-wrap">
+      <div id="scrubber"
+           data-bind="visible: soundPlaying, style: {left: scrubPos}">
+       </div>
+      </div>
+      
+      {{#each reorderedRandomSounds}}
+        {{> spectrogramCard}}
+      {{/each}}
+    </div>
+
+    <div id="audio">
+      {{#each randomSounds}}
+        <audio id="{{_id}}" src="{{audio}}"></audio>
+      {{/each}}
+    </div>
+
+  </div>
+  
+    <div id="reset" class="row text-center center-block">
+      <button class="btn btn-default" data-bind="click: reset, class: {btn-success: foundAll}">
+        <span class="glyphicon glyphicon-repeat"></span> Reset
+      </button>
+    </div>
+
+</template>

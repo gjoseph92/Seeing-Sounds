@@ -1,0 +1,330 @@
+[
+  {
+    "img": "img/bear_cubs.jpg",
+    "name": "Bear cubs",
+    "audio": "audio/Bear Cubs.wav",
+    "spectrogram": "spectrograms/Bear Cubs.png",
+    "bgpos_y": "40%"
+  },
+  {
+    "img": "img/Boreal chickadee 096 NPS photo.jpg",
+    "name": "Boreal Chickadee",
+    "audio": "audio/Boreal Chickadee.wav",
+    "spectrogram": "spectrograms/Boreal Chickadee.png",
+    "bgpos_y": "40%"
+  },
+  {
+    "img": "img/r44 fuel pumping.jpg",
+    "name": "Hand-pumping fuel into a helicopter",
+    "audio": "audio/Dahl Creek Airstrip_20110708_Quentin Slade Hand-pumping Fuel into a Robinson R-44 AMPLIFY.wav",
+    "spectrogram": "spectrograms/Dahl Creek Airstrip_20110708_Quentin Slade Hand-pumping Fuel into a Robinson R-44 AMPLIFY.png",
+    "bgpos_y": "10%"
+  },
+  {
+    "img": "img/dall_sheep_ram.jpg",
+    "name": "Dall sheep",
+    "audio": "audio/Dall Sheep.wav",
+    "spectrogram": "spectrograms/Dall Sheep.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/",
+    "name": "Dawn Chorus",
+    "audio": "audio/Dawn Chorus.wav",
+    "spectrogram": "spectrograms/Dawn Chorus.png"
+  },
+  {
+    "img": "img/ruby-crowned_kinglet.jpg",
+    "name": "Ruby-Crowned Kinglet",
+    "audio": "audio/DENABICR_20130707_135241 Ruby-crowned Kinglet song nibblet.wav",
+    "spectrogram": "spectrograms/DENABICR_20130707_135241 Ruby-crowned Kinglet song nibblet.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/Grey_Jay.jpg",
+    "name": "Grey Jay calls",
+    "audio": "audio/DENABICR_20130708_010248 clear, rare and varied Grey Jay calls TRIM.wav",
+    "spectrogram": "spectrograms/DENABICR_20130708_010248 clear, rare and varied Grey Jay calls TRIM.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/Grizzly_Denali_bear_snuffles.jpg",
+    "name": "Bear snuffles",
+    "audio": "audio/DENACABN_20130712_004624 Bear Snuffles for newsletter TRIM FILTER AMPLIFY.wav",
+    "spectrogram": "spectrograms/DENACABN_20130712_004624 Bear Snuffles for newsletter TRIM FILTER AMPLIFY.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/chunky_propeller_overflight.JPG",
+    "name": "Propeller airplane",
+    "audio": "audio/DENACATH_20120810_161709 chunky propeller overflight TRIM.wav",
+    "spectrogram": "spectrograms/DENACATH_20120810_161709 chunky propeller overflight TRIM.png",
+    "bgpos_y": "10%"
+  },
+  {
+    "img": "img/snowmachines_1.jpg",
+    "name": "Snowmachines revving and driving away",
+    "audio": "audio/DENADUNK_20120225_132911 Snowmachines Revving and Driving Away.wav",
+    "spectrogram": "spectrograms/DENADUNK_20120225_132911 Snowmachines Revving and Driving Away.png",
+    "bgpos_y": "70%"
+  },
+  {
+    "img": "img/surfbird.jpg",
+    "name": "Surfbird",
+    "audio": "audio/DENAFANG_20130628_040810_Surfbird, Bessel Bandpass 300 to 4500 Hz.wav",
+    "spectrogram": "spectrograms/DENAFANG_20130628_040810_Surfbird, Bessel Bandpass 300 to 4500 Hz.png",
+    "bgpos_y": "40%"
+  },
+  {
+    "img": "img/Caribou-on-Autumn-Tundra-Denali-National-Park.jpg",
+    "name": "Caribou walking, snorting, ankle clicking",
+    "audio": "audio/DENAFANG_20130729_131907-Caribou_Walking-Snorting-Clicking.wav",
+    "spectrogram": "spectrograms/DENAFANG_20130729_131907-Caribou_Walking-Snorting-Clicking.png",
+    "bgpos_y": "70%"
+  },
+  {
+    "img": "img/raven_2.jpg",
+    "name": "Northern Raven calls",
+    "audio": "audio/DENAHOTS_20140602_085834 excellent slow Northern Raven 'croak' calls, popping call, and water-droplet with reverberation TRIM BANDPASS 300 - 8000 Hz AMPLIFY _15 dBu.wav",
+    "spectrogram": "spectrograms/DENAHOTS_20140602_085834 excellent slow Northern Raven 'croak' calls, popping call, and water-droplet with reverberation TRIM BANDPASS 300 - 8000 Hz AMPLIFY _15 dBu.png",
+    "bgpos_y": "20%"
+  },
+  {
+    "img": "img/wilsons_snipe_credit_GerritVyn.jpg",
+    "name": "Wilson's Snipe vocal calls and winnowing",
+    "audio": "audio/DENALKAR_20100607_023144 Wilson's Snipe vocal calls and winnowing.wav",
+    "spectrogram": "spectrograms/DENALKAR_20100607_023144 Wilson's Snipe vocal calls and winnowing.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/beaver_american_spring_nome-alaska_2a.jpg",
+    "name": "Beaver tail slap",
+    "audio": "audio/DENAMURI_20150513_001032 Beaver tail slap, repeated NIB.wav",
+    "spectrogram": "spectrograms/DENAMURI_20150513_001032 Beaver tail slap, repeated NIB.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/machinery_drives_away_2.jpg",
+    "name": "Machinery drives away",
+    "audio": "audio/DENAPOL2_20120621_202413 machinery drives away, revving engine - possibly a solution to mystery from DENADUNK.wav",
+    "spectrogram": "spectrograms/DENAPOL2_20120621_202413 machinery drives away, revving engine - possibly a solution to mystery from DENADUNK.png",
+    "bgpos_y": "70%"
+  },
+  {
+    "img": "img/bus.jpg",
+    "name": "Denali bus",
+    "audio": "audio/DENASAVG_20110831_172343_Bus, unusual pressure sound 42 seconds in.wav",
+    "spectrogram": "spectrograms/DENASAVG_20110831_172343_Bus, unusual pressure sound 42 seconds in.png",
+    "bgpos_y": "60%"
+  },
+  {
+    "img": "img/whistling_hikers_1.jpg",
+    "name": "Whistling hikers",
+    "audio": "audio/DENASAVG_20110831_184055_whistling hikers.wav",
+    "spectrogram": "spectrograms/DENASAVG_20110831_184055_whistling hikers.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/Whimbrel_2_creditAlanMurphy.jpg",
+    "name": "Whimbrel and American Golden-Plover",
+    "audio": "audio/DENASUSH_20120611_132214 Whimbrel and American Golden-Plover AMPLIFY.wav",
+    "spectrogram": "spectrograms/DENASUSH_20120611_132214 Whimbrel and American Golden-Plover AMPLIFY.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/ice-bubbles.jpg",
+    "name": "Ice bubbles",
+    "audio": "audio/DENAUDAL_20100702_132530 ice bubbles and creaking.wav",
+    "spectrogram": "spectrograms/DENAUDAL_20100702_132530 ice bubbles and creaking.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/rockfall.jpg",
+    "name": "Rock motion on glacier",
+    "audio": "audio/DENAUYEN_20120521_144128 clear, deep rock motion on the glacier.wav",
+    "spectrogram": "spectrograms/DENAUYEN_20120521_144128 clear, deep rock motion on the glacier.png",
+    "bgpos_y": "70%"
+  },
+  {
+    "img": "img/rockfall-2-nasa.jpg",
+    "name": "Rockfalls with reverberations",
+    "audio": "audio/DENAYEGL_20140606_094239 rockfalls with powerful reverberation BANDPASS 100 - 7000 Hz AMPLIFY 18 dB.wav",
+    "spectrogram": "spectrograms/DENAYEGL_20140606_094239 rockfalls with powerful reverberation BANDPASS 100 - 7000 Hz AMPLIFY 18 dB.png",
+    "bgpos_y": "90%"
+  },
+  {
+    "img": "img/bulldozer.jpg",
+    "name": "C-Camp road construction",
+    "audio": "audio/DENA_C-Camp_20100708_Road Construction.wav",
+    "spectrogram": "spectrograms/DENA_C-Camp_20100708_Road Construction.png",
+    "bgpos_y": "60%"
+  },
+  {
+    "img": "img/dog_mushing.jpg",
+    "name": "Dog sled returning to yard",
+    "audio": "audio/DENA_Kennels_20120220_Dog sled returning to the yard, picking up speed, and greetings from those that stayed behind AMPLIFY TRIM.wav",
+    "spectrogram": "spectrograms/DENA_Kennels_20120220_Dog sled returning to the yard, picking up speed, and greetings from those that stayed behind AMPLIFY TRIM.png",
+    "bgpos_y": "60%"
+  },
+  {
+    "img": "img/riley_creek_bridge.jpg",
+    "name": "Traffic over Riley Creek bridge",
+    "audio": "audio/DENA_Parks Highway_20110722_Traffic Over the Riley Creek Bridge.wav",
+    "spectrogram": "spectrograms/DENA_Parks Highway_20110722_Traffic Over the Riley Creek Bridge.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/Alaska-Railroad-Denali-Star_train_1.jpg",
+    "name": "Train on Riley Creek historic bridge",
+    "audio": "audio/DENA_Riley Creek Train Bridge_20120621_125412.wav",
+    "spectrogram": "spectrograms/DENA_Riley Creek Train Bridge_20120621_125412.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/insect_wingbeats_3.jpg",
+    "name": "Insect wingbeats",
+    "audio": "audio/GAARNNUT_20140705_214919 very clear insect wingbeats.wav",
+    "spectrogram": "spectrograms/GAARNNUT_20140705_214919 very clear insect wingbeats.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/American Red Squirrel 040 NPS photo.jpg",
+    "name": "American Red Squirrel scold",
+    "audio": "audio/GAARNWAL_20140703_212606 very clear to distorted American Red Squirrel scold.wav",
+    "spectrogram": "spectrograms/GAARNWAL_20140703_212606 very clear to distorted American Red Squirrel scold.png",
+    "bgpos_y": "60%"
+  },
+  {
+    "img": "img/Red-breasted Merganser-wikimedia.jpg",
+    "name": "Red-breasted Merganser",
+    "audio": "audio/NOATKUGU_20130804_105347 Red-breasted Merganser, very clear recording.wav",
+    "spectrogram": "spectrograms/NOATKUGU_20130804_105347 Red-breasted Merganser, very clear recording.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/red-throated-loon.jpg",
+    "name": "Red-throated Loons call-and-response",
+    "audio": "audio/NOATKUGU_20130805_234213 Red-throated Loon antiphony.wav",
+    "spectrogram": "spectrograms/NOATKUGU_20130805_234213 Red-throated Loon antiphony.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/sled_dogs.jpg",
+    "name": "Sled dogs",
+    "audio": "audio/Sled Dogs.wav",
+    "spectrogram": "spectrograms/Sled Dogs.png",
+    "bgpos_y": "20%"
+  },
+  {
+    "img": "img/collared-pika-hatcher-pass-alaska-usa-gettyimages.jpg",
+    "name": "Pika",
+    "audio": "audio/soundscapes-backside-lake-pika.wav",
+    "spectrogram": "spectrograms/soundscapes-backside-lake-pika.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/dall-sheep.jpg",
+    "name": "Dall sheep bleat like old men",
+    "audio": "audio/soundscapes-fang-mountain-dall-sheep.wav",
+    "spectrogram": "spectrograms/soundscapes-fang-mountain-dall-sheep.png",
+    "bgpos_y": "40%"
+  },
+  {
+    "img": "img/Wolf_3484 NPS photo.jpg",
+    "name": "Hauke Creek wolf pack",
+    "audio": "audio/soundscapes-hauke-creek-wolves.wav",
+    "spectrogram": "spectrograms/soundscapes-hauke-creek-wolves.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/denali_climbers.jpg",
+    "name": "Mountaineers on Kahiltna Pass",
+    "audio": "audio/soundscapes-kahiltna-pass-mountaineers.wav",
+    "spectrogram": "spectrograms/soundscapes-kahiltna-pass-mountaineers.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/avalanche.jpg",
+    "name": "Avalanche and bird song",
+    "audio": "audio/soundscapes-kichatna-mountains-avalanche-bird-song.wav",
+    "spectrogram": "spectrograms/soundscapes-kichatna-mountains-avalanche-bird-song.png",
+    "bgpos_y": "40%"
+  },
+  {
+    "img": "img/sandhill_crane.jpg",
+    "name": "Sandhill Cranes on the McKinley River",
+    "audio": "audio/soundscapes-mckinley-river-sandhill-cranes.wav",
+    "spectrogram": "spectrograms/soundscapes-mckinley-river-sandhill-cranes.png",
+    "bgpos_y": "70%"
+  },
+  {
+    "img": "img/upper-west-branch-toklat-nps.jpg",
+    "name": "Upper west branch of the Toklat river",
+    "audio": "audio/soundscapes-upper-west-branch-toklat-AGS.wav",
+    "spectrogram": "spectrograms/soundscapes-upper-west-branch-toklat-AGS.png",
+    "bgpos_y": "60%"
+  },
+  {
+    "img": "img/insect_wingbeats_.jpg",
+    "name": "Mosquito",
+    "audio": "audio/soundscapes-west-kantishna-hills-mosquito.wav",
+    "spectrogram": "spectrograms/soundscapes-west-kantishna-hills-mosquito.png",
+    "bgpos_y": "70%"
+  },
+  {
+    "img": "img/yentna-glacier-mark-mcdermott.jpg",
+    "name": "Rockfall on Yentna glacier",
+    "audio": "audio/soundscapes-yentna-glacier-rockfalls.wav",
+    "spectrogram": "spectrograms/soundscapes-yentna-glacier-rockfalls.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/stream-upper-savage-nps.jpg",
+    "name": "Stream",
+    "audio": "audio/Stream.wav",
+    "spectrogram": "spectrograms/Stream.png",
+    "bgpos_y": "80%"
+  },
+  {
+    "img": "img/swainsons-thrush-audubon.jpg",
+    "name": "Swainson's Thrush",
+    "audio": "audio/Swainson's Thrush.wav",
+    "spectrogram": "spectrograms/Swainson's Thrush.png",
+    "bgpos_y": "10%"
+  },
+  {
+    "img": "img/Trumpeter_Swans.jpg",
+    "name": "Trumpeter Swan and Tree Sparrow",
+    "audio": "audio/Trumpeter Swan and Tree Sparrow.wav",
+    "spectrogram": "spectrograms/Trumpeter Swan and Tree Sparrow.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/Trumpeter_Swans_2.jpg",
+    "name": "Trumpeter Swan",
+    "audio": "audio/Trumpeter Swan.wav",
+    "spectrogram": "spectrograms/Trumpeter Swan.png",
+    "bgpos_y": "30%"
+  },
+  {
+    "img": "img/White-crowned sparrow_3415 NPS photo.jpg",
+    "name": "White Crowned Sparrow",
+    "audio": "audio/White Crowned Sparrow.wav",
+    "spectrogram": "spectrograms/White Crowned Sparrow.png",
+    "bgpos_y": "50%"
+  },
+  {
+    "img": "img/wood_frog.jpg",
+    "name": "Wood Frogs",
+    "audio": "audio/Wood Frogs.wav",
+    "spectrogram": "spectrograms/Wood Frogs.png",
+    "bgpos_y": "70%"
+  },
+  {
+    "img": "img/Wolf-pack-howling-med.jpg",
+    "name": "Wolves howling in Wrangall St. Elias",
+    "audio": "audio/WRSTBLMT_20150506_213242 wolves howling.wav",
+    "spectrogram": "spectrograms/WRSTBLMT_20150506_213242 wolves howling.png",
+    "bgpos_y": "20%"
+  }
+]

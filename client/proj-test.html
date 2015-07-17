@@ -1,0 +1,47 @@
+<head>
+  <title>proj-test</title>
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+</head>
+
+<body>
+<div id="main">
+  <section id="intro" class="container-fluid">
+
+  <div class="page-header">
+    <h1>Seeing Sound</h1>
+  </div>
+
+    <div class="row">
+      <div class="col-xs-12">
+      <p>We are used to only hearing sounds&mdash;but sounds can be seen too, using a representation called a <em>spectrogram</em>.</p>
+      <p>Scroll down to try matching each of the sounds to their spectrograms.</p>
+      </div>
+    </div>
+
+    <div class="row" id="demo-row">
+      <div class="col-xs-6 demo-col">
+        <p class="text-center">Click an image to hear its sound...</p>
+        <div class="card soundCard"></div>
+      </div>
+      <div class="col-xs-6 demo-col">
+        <p class="text-center">...then double-click the spectrogram that matches it. Single-click to skip around in time.</p>
+        <div class="card soundCard"></div>        
+      </div>
+    </div>
+
+    <div id="scroll-down-wrap" class="text-center center-block">
+      <span class="glyphicon glyphicon-download" onclick="$.fn.moveTo(2)"></span>
+    </div>
+
+
+  </section>
+  <section id="game" class="container-fluid">
+    {{> matchingGame}}
+  </section>
+</div>
+
+<script>
+  $("#main").onepage_scroll({pagination: false});
+</script>
+
+</body>

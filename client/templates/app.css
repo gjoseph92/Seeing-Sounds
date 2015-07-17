@@ -1,0 +1,29 @@
+#intro {
+	background-color: rgb(243, 243, 243);
+}
+
+#demo-spec-row {
+	margin-top: 70px;
+}
+
+#scroll-down-wrap {
+	position: absolute;
+	bottom: 30px;
+	width: 100%;
+}
+#scroll-down-wrap .glyphicon {
+	font-size: 400%;
+	transition: color 0.2s;
+	cursor: pointer;
+}
+#scroll-down-wrap .glyphicon:hover {
+	color: rgb(30, 30, 30);
+}
+
+#game {
+
+}
+
+.onepage-pagination {
+	/*display: none;*/
+}
