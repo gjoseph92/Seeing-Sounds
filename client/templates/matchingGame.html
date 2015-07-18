@@ -1,4 +1,15 @@
 <template name="matchingGame">
+  
+  <div class="row" id="demo-row">
+    <div class="col-xs-6">
+      <p class="text-center">Click an image to hear its sound...</p>
+    </div>
+    <div class="col-xs-6">
+      <p class="text-center">...then <b>double-click</b> the spectrogram that matches it. <b>Single-click</b> to skip around in time.</p>
+    </div>
+  </div>
+
+
   <div id="board" class="row">
      <div id="sounds" class="col-xs-6">
       {{#each randomSounds}}
