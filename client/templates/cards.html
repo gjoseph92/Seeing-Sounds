@@ -1,14 +1,14 @@
 <template name="soundCard">
-	<div class="card soundCard"
+	<div class="mg-card mg-soundCard"
 		 style="background-image: url('{{img}}'); background-position-y: {{bgpos_y}}"
 		 data-bind="class: {playing: isPlaying, found: isFound}, click: togglePlay">
 
-		<div class="label">{{name}}</div>
+		<div class="mg-label">{{name}}</div>
 	</div>
 </template>
 
 <template name="spectrogramCard">
-  <div class="card spectrogramCard"
+  <div class="mg-card mg-spectrogramCard"
        style="background-image: url('{{spectrogram}}')"
        data-bind="class: {found: isFound, wrongGuess: wrongGuess}, click: scrub"
   ></div>

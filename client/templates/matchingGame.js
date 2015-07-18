@@ -1,43 +1,32 @@
-Sounds = new Mongo.Collection(null);
+Template.matchingGame.onCreated(function() {
+  this.numSounds = this.data.numSounds || new ReactiveVar(5);
 
-HTTP.get('sounds.json', function(error, response) {
-  if (!error) {
-    var sounds = response.data;
-    sounds.forEach(function(sound) {
-      Sounds.insert(sound);
-    });
-
-    ViewModel.byTemplate("matchingGame")[0].reset();
-  }
+  this.playingId = new ReactiveVar(null);
+  this.randomSounds = new ReactiveVar([]);
+  this.reorderedRandomSounds = new ReactiveVar([]);
+  this.isPlaying = false;
 });
-
-
-Session.setDefault("playingId", null);
-Session.setDefault("numSounds", 5);
-
-Session.setDefault("randomSounds", []);
-Session.setDefault("reorderedRandomSounds", []);
 
 Template.matchingGame.helpers({
   randomSounds: function() {
-    return Session.get("randomSounds");
+    return Template.instance().randomSounds.get();
   },
   reorderedRandomSounds: function() {
-    return Session.get("reorderedRandomSounds");
+    return Template.instance().reorderedRandomSounds.get();
   }
 });
 
-var isPlaying;
+// var isPlaying;
 Template.matchingGame.events({
-  'ended audio': function (event) {
+  'ended audio': function (event, template) {
     // Session.set("playingId", null);
-    isPlaying = false;
+    template.isPlaying = false;
   },
-  'playing audio': function(event) {
-    var elem = document.getElementById(Session.get('playingId'));
-    isPlaying = true;
+  'playing audio': function(event, template) {
+    var elem = template.find('.'+template.playingId.get());
+    template.isPlaying = true;
     (function movePlayhead() {
-      if (isPlaying) requestAnimationFrame(movePlayhead);
+      if (template.isPlaying) requestAnimationFrame(movePlayhead);
       var progress = elem.currentTime / elem.duration;
       ViewModel.byId("matchingGame").scrubPos( progress * 100 + "%" );      
     })();
@@ -50,24 +39,25 @@ Template.matchingGame.events({
 });
 
 Template.matchingGame.viewmodel('matchingGame', {
-  reset: function() {
-
+  reset: function(data) {
+    var template = this.templateInstance;
+    var sounds = data.sounds;
     // pause any sound that's playing
 
-    var playingId = Session.get("playingId");
+    var playingId = template.playingId.get();
 
     if (playingId != null) {
-      var playing = document.getElementById(playingId);
+      var playing = template.find(playingId);
       playing.pause();
       playing.currentTime = 0;
     }
 
-    Session.set("playingId", null);
+    template.playingId.set(null);
 
     // re-randomize sounds list and unmark all as found
 
-    Sounds.find().forEach(function(sound) {
-      Sounds.update(sound._id, {$set: {
+    sounds.find().forEach(function(sound) {
+      sounds.update(sound._id, {$set: {
         found: false,
         randOrder: Math.random()
       }})
@@ -76,9 +66,9 @@ Template.matchingGame.viewmodel('matchingGame', {
     // pick new random sounds, and randomize that sublist again
     // for the spectrograms
 
-    var randomSounds = Sounds.find({}, {
+    var randomSounds = sounds.find({}, {
       sort: {'randOrder': 1},
-      limit: Session.get("numSounds")
+      limit: template.numSounds.get()
     }).fetch();
 
     var reorderedRandomSounds = randomSounds.slice(0);
@@ -91,18 +81,18 @@ Template.matchingGame.viewmodel('matchingGame', {
         reorderedRandomSounds[j] = temp;
     }
 
-    Session.set("randomSounds", randomSounds);
-    Session.set("reorderedRandomSounds", reorderedRandomSounds);
+    template.randomSounds.set(randomSounds);
+    template.reorderedRandomSounds.set(reorderedRandomSounds);
 
     // $.fn.moveTo(1);
   },
 
-  foundAll: function () {
-    return Sounds.find({found: true}).count() == Session.get("numSounds");
+  foundAll: function (data) {
+    return data.sounds.find({found: true}).count() == this.templateInstance.numSounds.get();
   },
 
   soundPlaying: function() {
-    return Session.get('playingId') != null;
+    return this.templateInstance.playingId.get() != null;
   },
   scrubPos: 0
 });

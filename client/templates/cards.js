@@ -1,44 +1,45 @@
 Template.soundCard.viewmodel( function (data) {
   return {
     togglePlay: function() {
-      var playingId = Session.get("playingId");
+      var parentTemplate = this.parent().templateInstance;
+      var playingId = parentTemplate.playingId;
 
-      if (playingId != data._id) {
-        if (playingId != null) {
-          var playing = document.getElementById(playingId);
+      if (playingId.get() != data._id) {
+        if (playingId.get() != null) {
+          var playing = parentTemplate.find('.'+playingId.get());
           playing.pause();
           playing.currentTime = 0;
         }
 
-        var audio = document.getElementById(data._id);
+        var audio = parentTemplate.find('.'+data._id);
         audio.play();
-        Session.set("playingId", data._id);
+        playingId.set(data._id);
 
       } else {
-        var playing = document.getElementById(playingId);
+        var playing = parentTemplate.find('.'+playingId.get());
         playing.pause();
         playing.currentTime = 0;
-        Session.set("playingId", null);
+        playingId.set(null);
       }
     },
 
     isPlaying: function() {
-      return data._id == Session.get("playingId");
+      return data._id == this.parent().templateInstance.playingId.get();
     },
 
     isFound: function() {
-      return Sounds.findOne({_id: data._id}).found;
+      return this.parent().templateInstance.data.sounds.findOne({_id: data._id}).found;
     }
   }
 });
 
-var lastClickTimestamp = 0;
-var lastPlayhead;
 Template.spectrogramCard.viewmodel( function(data) {
   return {
+    lastClickTimestamp: 0,
+    lastPlayhead: 0,
     guess: function() {
-      if (data._id == Session.get("playingId")) {
-        Sounds.update( {_id: data._id}, {$set: {found: true}} );
+      if (data._id == this.parent().templateInstance.playingId.get()) {
+        this.parent().templateInstance.data.sounds.update( {_id: data._id}, {$set: {found: true}} );
         return true;
       } else {
         var wrongGuess = this.wrongGuess;
@@ -49,37 +50,37 @@ Template.spectrogramCard.viewmodel( function(data) {
     },
 
     isFound: function() {
-      return Sounds.findOne({_id: data._id}).found;
+      return this.parent().templateInstance.data.sounds.findOne({_id: data._id}).found;
     },
 
     wrongGuess: false,
 
     scrub: function(event) {
-      var playingId = Session.get("playingId");
+      var playingId = this.parent().templateInstance.playingId.get();
       if (playingId != null) {
-        var playing = document.getElementById(playingId);
+        var playing = this.parent().templateInstance.find('.'+playingId);
 
-        if (event.timeStamp - lastClickTimestamp < 400) {
+        if (event.timeStamp - this.lastClickTimestamp() < 400) {
           // handle double-click: guess this spectrogram
           var correct = this.guess();
-          lastClickTimestamp = 0;
+          this.lastClickTimestamp(0);
           if (!correct) {
             // reset playhead back to position before double-click if guessed wrong
-            playing.currentTime = lastPlayhead;
+            playing.currentTime = this.lastPlayhead();
           } else {
             // stop playing if correct
             playing.pause();
             playing.currentTime = 0;
-            Session.set("playingId", null);
+            this.parent().templateInstance.playingId.set(null);
           }
         } else {
           // handle single click: move the playhead
         
-          lastClickTimestamp = event.timeStamp;
+          this.lastClickTimestamp(event.timeStamp);
           var elemWidth = event.target.scrollWidth;
           var newScrub = event.offsetX / elemWidth;
 
-          lastPlayhead = playing.currentTime;
+          this.lastPlayhead(playing.currentTime);
           playing.currentTime = newScrub * playing.duration;
           playing.play();
         }
@@ -87,76 +88,3 @@ Template.spectrogramCard.viewmodel( function(data) {
     }
   }
 });
-
-// Template.spectrogramCard.onRendered(function () {
-//   var template = this;
-//   this.autorun(function () {
-//     var data = Template.currentData();
-//     var canvas = template.find("canvas");
-//     var sound = document.getElementById(data._id);
-
-//     spectrogram(sound, canvas);
-//   });
-// });
-
-
-/*function spectrogram (audioElem, canvasElem) {
-  audioElem.addEventListener('canplaythrough', function() {
-    audioCtx = new AudioContext();
-
-    src = audioCtx.createMediaElementSource(audioElem);
-    analyser = audioCtx.createAnalyser();
-
-    src.connect(analyser);
-    // analyser.connect(audioCtx.destination);
-
-    analyser.fftsize = 256;
-    analyser.smoothingTimeConstant = 0.3;
-    var freqs = new Uint8Array(analyser.frequencyBinCount);
-
-    canvasCtx = canvasElem.getContext('2d');
-    var width = canvasElem.width;
-    var height = canvasElem.height;
-    
-    var duration = audioElem.duration;
-
-    var freqHeight = height / freqs.length;
-
-    var lastDrawnDuration = 0;
-    var now;
-    var elapsed;
-
-    function drawWindow () {
-      analyser.getByteFrequencyData(freqs);
-
-      now = audioElem.currentTime;
-      elapsed = now - lastDrawnDuration;
-      lastDrawnDuration = now;
-      
-      if (now < duration) window.requestAnimationFrame(drawWindow);
-      else {
-        src.disconnect();
-        audioCtx.close();
-      }
-
-      // if (elapsed > 0) {
-        var windowWidth = (elapsed / duration) * width;
-        var x_end = (now / duration) * width;
-
-        for (var i = 0; i < freqs.length; i++) {
-          var value = freqs[i];
-
-          var color = 'rgb(V, V, V)'.replace(/V/g, 255 - value);
-          var y = (freqs.length - i - 1) * freqHeight;
-
-          canvasCtx.fillStyle = color;
-          canvasCtx.fillRect(x_end - windowWidth, y, windowWidth, freqHeight);
-        };
-      // }
-
-    }
-
-    audioElem.play();
-    drawWindow();
-  });
-}*/

@@ -1,4 +1,4 @@
-.card {
+.mg-card {
 	/*height: 150px;*/
 	/*height: 10%;*/
 	flex: 1 1 auto;
@@ -10,7 +10,7 @@
 	transition: box-shadow 0.2s, all 0.1s;
 }
 
-.card > .label {
+.mg-card > .mg-label {
 	position: absolute;
 	bottom: 0;
 	width: 100%;
@@ -20,83 +20,52 @@
 	transition: color 0.2s;
 }
 
-.card.playing > .label {
+.mg-card.playing > .mg-label {
 	color: yellow;
 }
 
-/*.soundCard.found {
-	-webkit-filter: grayscale(100%) brightness(70%);
-	box-shadow: inset 0 0 30px;
-
-}
-.spectrogramCard.found {
-	box-shadow: inset 0 0 50px;
-}
-.spectrogramCard.found > img {
-	-webkit-filter: sepia(40%) brightness(60%);
-}*/
-
-.card.found {
+.mg-card.found {
 	-webkit-filter: grayscale(80%) sepia(40%) brightness(60%);
 	box-shadow: inset 0 0 30px;
 }
-/*.card.found {
-	box-shadow: 0 0px 25px rgba(0,180,0,0.9);
-}*/
-.card.wrongGuess {
+
+.mg-card.wrongGuess {
 	box-shadow: 0 0px 25px rgba(210,0,0,0.9);
 }
 
-.soundCard {
+.mg-soundCard {
 	background-size: cover;
 	background-repeat: no-repeat;
 	background-position: 50% 50%;
 	cursor: pointer;
 	/*transition: all 0.05s;*/
 }
-.soundCard:not(.found):hover {
+.mg-soundCard:not(.found):hover {
 	-webkit-filter: contrast(120%);
 }
-.soundCard.found:hover {}
 
-.spectrogramCard {
+.mg-spectrogramCard {
 	-webkit-filter: sepia(30%) contrast(110%);
 	background-size: 100% 100%;
 }
 
-/*.spectrogramCard > img {
-	width: 100%;
-	z-index: -1;
-	-webkit-user-select: none;
-	-moz-user-select: none;
-}*/
 
-
-#demo-row {
-	margin-top: 60px;
-}
-.demo-col {
-	height: 150px;
-	display: flex;
-	flex-direction: column;
-}
-
-#sounds, #spectrograms {
+.mg-sounds, .mg-spectrograms {
 	height: 90%;
 	display: flex;
 	flex-direction: column;
 }
-#board {
+.mg-board {
 	height: 100%;
 }
 
-#reset {
+.mg-reset {
 	position: absolute;
 	bottom: 15px;
 	width: 100%;
 }
 
-#scrubber {
+.mg-scrubber {
 	position: absolute;
 	height: 100%;
 	width: 1px;
@@ -105,7 +74,7 @@
 	z-index: 1;
 	pointer-events: none;
 }
-#scrubber-wrap {
+.mg-scrubber-wrap {
 	position: absolute;
 	left: 15px;
 	right: 15px;

@@ -4,6 +4,7 @@
 </head>
 
 <body>
+<template name="main">
 <div id="main">
   <section id="intro" class="container-fluid">
 
@@ -36,7 +37,7 @@
 
   </section>
   <section id="game" class="container-fluid">
-    {{> matchingGame}}
+    {{> matchingGame sounds=Sounds}}
   </section>
 </div>
 
@@ -44,4 +45,5 @@
   $("#main").onepage_scroll({pagination: false});
 </script>
 
+</template>
 </body>
